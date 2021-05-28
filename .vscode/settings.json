@@ -20,7 +20,9 @@
         "ranges": "c"
     },
     "[markdown]": {
+
         "editor.trimAutoWhitespace": false,
         "files.trimTrailingWhitespace": false
-    }
+    },
+    "diffEditor.wordWrap": "off"
 }
