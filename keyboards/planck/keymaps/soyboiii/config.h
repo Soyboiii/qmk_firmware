@@ -36,3 +36,6 @@
 
 // from qmk audio stuff
 #define AUDIO_CLICKY
+
+// for the unicode stuff
+#define UNICODE_SELECTED_MODES UC_WINC, UC_MAC, UC_LNX
