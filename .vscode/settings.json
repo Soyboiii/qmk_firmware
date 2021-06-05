@@ -24,5 +24,6 @@
         "editor.trimAutoWhitespace": false,
         "files.trimTrailingWhitespace": false
     },
-    "diffEditor.wordWrap": "off"
+    "diffEditor.wordWrap": "off",
+    "oneDarkPro.italic": false
 }
