@@ -43,13 +43,17 @@ enum unicode_names {
 enum {
     TD_LCBR_RCBR,
     TD_LBR_RBR,
+    TD_LPAR_RPAR,
+    TD_CLN_SCLN,
     TD_TILD_GRV
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
     // Tap once for Escape, twice for Caps Lock
     [TD_LCBR_RCBR] = ACTION_TAP_DANCE_DOUBLE(KC_LCBR, KC_RCBR),
-    [TD_TILD_GRV] = ACTION_TAP_DANCE_DOUBLE(KC_TILD, KC_GRV),
+    [TD_TILD_GRV] = ACTION_TAP_DANCE_DOUBLE(KC_GRV, KC_TILD),
+    [TD_LPAR_RPAR] = ACTION_TAP_DANCE_DOUBLE(KC_LPRN, KC_RPRN),
+    [TD_CLN_SCLN] = ACTION_TAP_DANCE_DOUBLE(S(KC_SCLN), KC_SCLN),
     [TD_LBR_RBR] = ACTION_TAP_DANCE_DOUBLE(KC_LBRC, KC_RBRC)
 };
 
@@ -94,11 +98,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  * Adjust                                                                                 *  Raise
  * ,-----------------------------------------------------------------------------------.  *  ,-----------------------------------------------------------------------------------.
- * |  F1  |  F2  |  F3  |  F4  |  F5  |      |      |  F7  |  F8  |  F9  |  F10 |  F11 |  *  |   1  |   2  |   3  |   4  |   5  |      |      |   6  |   7  |   8  |   9  |   0  |
+ * |  F1  |  F2  |  F3  |  F4  |  F5  |      |      |  F7  |  F8  |  F9  |  F10 |  F11 |  *  |   1  |   2  |   3  |  { } |   5  |      |      |   6  |   7  |   8  |   9  |   0  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|  *  |------+------+------+------+------+------+------+------+------+------+------+------|
- * |  F6  |ClkOn |ClkOff|      |  Esc |      |      |PrtSc |      |      |      |  F12 |     |   !  |   @  |   #  |  [ ] |   :  |      |      |   +  |   *  |   ^  |   (  |   )  |
+ * |  F6  |ClkOn |ClkOff|      |  Esc |      |      |PrtSc |      |      |      |  F12 |     |   !  |   @  |   #  |  ( ) |  : ; |      |      |   +  |   *  |   ^  |   (  |   )  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|  *  |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Reset|MsSpd1|MsSpd2|MsSpd3|      |      |      |Insert|      |      |      |Sleep |  *  |   _  |  ~ ' |   %  |  { } |   ;  |      |      |   -  |   =  |   &  |   |  |  \   |
+ * | Reset|MsSpd1|MsSpd2|MsSpd3|      |      |      |Insert|      |      |      |Sleep |  *  |   \  |  ~ ' |   %  |  [ ] |      |      |      |   -  |   =  |   &  |   |  |  \   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|  *  |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |  *  |      |      |      |      |      |      |      |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'  *  `-----------------------------------------------------------------------------------'
@@ -107,23 +111,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T, XXXXXXX, XXXXXXX, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   
     HOME_A,  HOME_S,  HOME_D,  HOME_F,  KC_G, XXXXXXX, XXXXXXX, KC_H,    HOME_J,  HOME_K,  HOME_L,  HOME_QU,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, XXXXXXX, XXXXXXX, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-    XXXXXXX, XXXXXXX,  KC_ESC, LOWER, KC_SPC, XXXXXXX, XXXXXXX, KC_BSPC, RAISE,   KC_DEL,  XXXXXXX,   XXXXXXX
+    XXXXXXX, XXXXXXX, XXXXXXX, LOWER, KC_SPC, XXXXXXX, XXXXXXX, KC_BSPC, RAISE,   XXXXXXX,  XXXXXXX,   XXXXXXX
 ),
 
 
 [_LOWER] = LAYOUT_planck_grid(
     KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_BTN2, _______, _______, _______, _______, _______, _______, XP(UNI_aa,UNI_AA),
     KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_BTN1, _______, _______, _______, DESK_L,  DESK_R, XP(UNI_oo,UNI_OO), XP(UNI_ae,UNI_AE),
-    KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_D, KC_BTN3, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY,
+    KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_D, KC_BTN3, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_MPLY,
     _______, _______, _______, _______, KC_DEL,  _______, _______, KC_ESC,  _______, _______, _______, _______
 ),
 
 
 [_RAISE] = LAYOUT_planck_grid(
-    KC_1,    KC_2,    KC_3,    KC_4,     KC_5,    _______, _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-    KC_EXLM, KC_AT,   KC_HASH, TD(TD_LBR_RBR), S(KC_SCLN), _______, _______, KC_PLUS, KC_ASTR,  KC_CIRC, KC_LPRN, KC_RPRN,
-    KC_UNDS, TD(TD_TILD_GRV), KC_PERC, TD(TD_LCBR_RCBR),  KC_SCLN, _______, _______, KC_MINS, KC_EQL,  KC_AMPR, KC_PIPE, KC_BSLS,
-    _______, _______, _______, _______, KC_DEL, _______, _______, KC_ESC, _______, _______, _______, _______
+    KC_EXLM, KC_AT,           KC_HASH  TD(TD_LCBR_RCBR), KC_PERC,         _______, _______, KC_CIRC, KC_7,  KC_8, KC_9, KC_ASTR,
+    KC_PIPE, KC_DLR,          KC_HASH, TD(TD_LPAR_RPAR), TD(TD_CLN_SCLN), _______, _______, KC_EQL,  KC_4,  KC_5, KC_6, KC_PLUS,
+    KC_BSLS, TD(TD_TILD_GRV), KC_PERC, TD(TD_LBR_RBR),   KC_UNDS,         _______, _______, KC_0,    KC_1,  KC_2, KC_3, KC_MINS,
+    _______, _______,         _______, _______, KC_DEL,  _______,         _______, KC_ESC, _______, _______, _______, _______
 ),
 
 

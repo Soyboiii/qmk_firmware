@@ -42,3 +42,4 @@
 
 #define MK_3_SPEED
 
+#define TAPPING_TERM 175

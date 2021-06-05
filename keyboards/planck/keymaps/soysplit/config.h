@@ -42,5 +42,5 @@
 
 #define MK_3_SPEED
 
-#define TAPPING_TERM 150 // originally was 200. 150 is really low but i can manage if i am fast it is mostly the alt keys that i am too slow with i think i push my pinkeys too far however this can be impoved.
+#define TAPPING_TERM 200 // originally was 200. 150 is really low but i can manage if i am fast it is mostly the alt keys that i am too slow with i think i push my pinkeys too far however this can be impoved. Consider setting the time at 200or so for the pinkeys and like lower for the stronger fingers
 #define IGNORE_MOD_TAP_INTERRUPT
