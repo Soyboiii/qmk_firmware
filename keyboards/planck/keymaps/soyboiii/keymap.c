@@ -63,11 +63,13 @@ enum unicode_names {
 };
 
 enum {
-    TD_PLAY_NEXT
+    TD_PLAY_NEXT,
+    TD_MUTE_PREV
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_PLAY_NEXT] = ACTION_TAP_DANCE_DOUBLE(KC_MPLY, KC_MNXT) // Tap once for play, twice for next
+    [TD_PLAY_NEXT] = ACTION_TAP_DANCE_DOUBLE(KC_MPLY, KC_MNXT), // Tap once for play, twice for next
+    [TD_MUTE_PREV] = ACTION_TAP_DANCE_DOUBLE(KC_MUTE, KC_MPRV)  // Tap once for mute, twice for previous
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -112,13 +114,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  * Adjust                                                                                 *  Raise
  * ,-----------------------------------------------------------------------------------.  *  ,-----------------------------------------------------------------------------------.
- * | Reset|      |      |  AE  |  😄 |  😅  |  😊  | 🙃  | 😋   |      |  OO  |  AA  |  *  |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
+ * | Reset|      |      |  AE  |  😄 |  😅  |  😊  | 🙃  | 😋   |  Win |  OO  |  AA  |  *  |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|  *  |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |  AA  |ClkOn |ClkOff|  😎 |  🤓  |  💖  | 💯  |  👀  |      |  OO  |  AE  |  *  |      |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |   -  |   =  |   [  |   ]  |  \   |
+ * |      |  AA  |ClkOn |ClkOff|  😎 |  🤓  |  💖  | 💯  |  👀  |  Lnx |  OO  |  AE  |  *  |      |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |   -  |   =  |   [  |   ]  |  \   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|  *  |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |MsSpd1|MsSpd2|MsSpd3|  🎉 |  ✨  |  💣  | 🔥   |  🏳️‍🌈 |      |      |Sleep |  *  |      |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |ISO # |ISO / |Insert|PrtSrc|      |
+ * |      |MsSpd1|MsSpd2|MsSpd3|  🎉 |  ✨  |  💣  | 🔥   |  🏳️‍🌈 |  Mac |      |Sleep |  *  |      |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |ISO # |ISO / |Insert|PrtSrc|      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|  *  |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |             |      |      |      |      |      |  *  |      |      |      |      |      |    Space    |      | Next | Vol- | Vol+ | Play |
+ * |      |      |      |      |      |             |      |      |      |      |      |  *  |      |      |      |      |      |    Space    |      |MutPrv| Vol- | Vol+ |PlyNxt|
  * `-----------------------------------------------------------------------------------'  *  `-----------------------------------------------------------------------------------'
  */     
 [_QWERTY] = LAYOUT_planck_grid(
@@ -141,14 +143,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
     _______,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
     _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_INS, KC_PSCR, _______,
-    _______, _______, _______, _______, _______, KC_SPC, KC_SPC, _______, KC_MUTE, KC_VOLD, KC_VOLU, TD(TD_PLAY_NEXT)
+    _______, _______, _______, _______, _______, KC_SPC, KC_SPC, _______, TD(TD_MUTE_PREV), KC_VOLD, KC_VOLU, TD(TD_PLAY_NEXT)
 ),
 
 
 [_ADJUST] = LAYOUT_planck_grid(
-    RESET,       _______, _______, ALT_ae,  X(UNI_SMILE), X(UNI_SMISW), X(UNI_SMIBH), X(UNI_SMIUP), X(UNI_SAVOR),  _______, ALT_oo,    ALT_aa,
-    _______,     ALT_aa,  CK_ON,   CK_OFF,  X(UNI_SUNGL), X(UNI_NERDG), X(UNI_SPHRT), X(UNI_HNDRD), X(UNI_EYES),   _______, ALT_oo,    ALT_ae,
-    MO(_NORDIC), KC_ACL0, KC_ACL1, KC_ACL2, X(UNI_PARTY), X(UNI_SPARK), X(UNI_BOMB),  X(UNI_FIRE),  UNI_PRIDE,  _______, _______,  KC_SLEP,
+    RESET,       _______, _______, ALT_ae,  X(UNI_SMILE), X(UNI_SMISW), X(UNI_SMIBH), X(UNI_SMIUP), X(UNI_SAVOR),  UC_M_WC, ALT_oo,    ALT_aa,
+    _______,     ALT_aa,  CK_ON,   CK_OFF,  X(UNI_SUNGL), X(UNI_NERDG), X(UNI_SPHRT), X(UNI_HNDRD), X(UNI_EYES),   UC_M_LN, ALT_oo,    ALT_ae,
+    MO(_NORDIC), KC_ACL0, KC_ACL1, KC_ACL2, X(UNI_PARTY), X(UNI_SPARK), X(UNI_BOMB),  X(UNI_FIRE),  UNI_PRIDE,  UC_M_MA, _______,  KC_SLEP,
     _______,     _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______,  _______
 ),
 
