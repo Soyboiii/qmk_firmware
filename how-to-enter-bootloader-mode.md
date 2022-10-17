@@ -1,0 +1,1 @@
+unplug the skeletyl, then plug it back in holding the reset button on the right hand half of the keyboard, then let go of the reset button and it should get connected in bootloader mode, and the flashing should proceed, if you did the `qmk flash` command
