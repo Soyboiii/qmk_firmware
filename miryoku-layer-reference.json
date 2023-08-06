@@ -19,14 +19,12 @@
       "x": 2,
       "c": "#888888",
       "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n\n\n\n\n#00ffff",
-      "a": 0,
       "f": 3
     },
-    "E\nF8\n*\n8\nExtra\n\n\n\nÆ",
+    "E\nF8\n*\n8\n\n\n\n\nÆ",
     {
       "x": 6,
       "t": "#000000\n\n#ffff00\n#00ffff\n#ffffff",
-      "a": 4,
       "fa": [
         0,
         0,
@@ -34,7 +32,7 @@
         2
       ]
     },
-    "I\n\nCopy\nCopy\nExtra"
+    "I\n\nCopy\nCopy"
   ],
   [
     {
@@ -43,23 +41,27 @@
       "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n#ffffff",
       "f": 3
     },
-    "W\nF7\n&\n7\nTap",
+    "W\nF7\n&\n7",
     {
       "x": 1,
       "f": 3
     },
-    "R\nF9\n(\n9\nBase",
+    "R\nF9\n(\n9",
     {
       "x": 4,
       "t": "#000000\n\n#ffff00\n#00ffff\n#ffffff",
-      "f": 3
+      "fa": [
+        0,
+        0,
+        1
+      ]
     },
-    "U\n\nPaste\nPaste\nBase",
+    "U\n\nPaste\nPaste",
     {
       "x": 1,
       "f": 3
     },
-    "O\n\nCut\nCut\nTap"
+    "O\n\nCut\nCut"
   ],
   [
     {
@@ -98,7 +100,7 @@
         2
       ]
     },
-    "Q\nF12\n{\n[\nBoot\n\n\n\nØ",
+    "Q\nF12\n{\n[\n\n\n\n\nØ",
     {
       "x": 10,
       "t": "#000000\n\n#ffff00\n#00ffff\n#ffffff",
@@ -109,7 +111,7 @@
         2
       ]
     },
-    "P\n\nUndo\nUndo\nBoot"
+    "P\n\nUndo\nUndo"
   ],
   [
     {
@@ -212,12 +214,12 @@
         1
       ]
     },
-    "C\nF2\n@\n2\nOpp\n\n\n\nMac",
+    "C\nF2\n@\n2\n\n\n\n\nMac",
     {
       "x": 6,
       "t": "#000000\n\n#ffff00\n#00ffff\n#ffffff"
     },
-    ",\n\n⇧\nPage Up\nOpp"
+    ",\n\n⇧\nPage Up"
   ],
   [
     {
@@ -230,12 +232,12 @@
       "x": 1,
       "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n#ffffff"
     },
-    "V\nF3\n#\n3\nCur",
+    "V\nF3\n#\n3\nBoot",
     {
       "x": 4,
       "t": "#000000\n\n#ffff00\n#00ffff\n#ffffff"
     },
-    "M\n\n⇩\nPage Down\nCur",
+    "M\n\n⇩\nPage Down",
     {
       "x": 1,
       "t": "#000000\n\n#ffff00\n#00ffff"
@@ -285,12 +287,12 @@
         1
       ]
     },
-    "Z\nF10\n~\n`\nButton\n\n\n\nWin",
+    "Z\nF10\n~\n`\n\n\n\n\nWin",
     {
       "x": 10,
-      "t": "#000000\n\n\n#00ffff\n#C0C0C0"
+      "t": "#000000\n\n\n#00ffff\n#ffffff"
     },
-    "/\n\n\nInsert\nButton"
+    "/\n\n\nInsert\nBoot"
   ],
   [
     {
