@@ -18,14 +18,14 @@
       "y": -0.5,
       "x": 2,
       "c": "#888888",
-      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n\n\n\n\n#00ffff\n\n\n#ffffff",
+      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n\n\n\n\n#00ffff",
       "a": 0,
       "f": 3
     },
     "E\nF8\n*\n8\nExtra\n\n\n\nÆ",
     {
       "x": 6,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff\n#ffffff",
+      "t": "#000000\n\n#ffff00\n#00ffff\n#ffffff",
       "a": 4,
       "fa": [
         0,
@@ -51,7 +51,7 @@
     "R\nF9\n(\n9\nBase",
     {
       "x": 4,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff\n#ffffff",
+      "t": "#000000\n\n#ffff00\n#00ffff\n#ffffff",
       "f": 3
     },
     "U\n\nPaste\nPaste\nBase",
@@ -77,7 +77,7 @@
     "T\nPrtScn <i>SysRq</i>\n}\n]",
     {
       "x": 2,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff",
+      "t": "#000000\n\n#ffff00\n#00ffff",
       "f": 3,
       "fa": [
         0,
@@ -101,7 +101,7 @@
     "Q\nF12\n{\n[\nBoot\n\n\n\nØ",
     {
       "x": 10,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff\n#ffffff",
+      "t": "#000000\n\n#ffff00\n#00ffff\n#ffffff",
       "fa": [
         0,
         0,
@@ -149,6 +149,7 @@
     "J\n🔉\n⬇\n▼\nShift",
     {
       "x": 1,
+      "t": "#000000\n#ff00ff\n\n#00ffff",
       "f": 3
     },
     "L\n⏭\n\n▶\nAlt"
@@ -189,7 +190,7 @@
     "A\nF11\n:\n;\nSuper\n\n\n\nÅ",
     {
       "x": 10,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff",
+      "t": "#000000\n\n#ffff00\n#00ffff",
       "f": 3
     },
     "'\n\n➡\nCaps Lock\nSuper"
@@ -198,13 +199,23 @@
     {
       "y": -0.5,
       "x": 2,
-      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n#ffffff",
-      "f": 3
+      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n#ffffff\n\n\n\n#00ffff",
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
     },
-    "C\nF2\n@\n2\nOpp",
+    "C\nF2\n@\n2\nOpp\n\n\n\nMac",
     {
       "x": 6,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff\n#ffffff"
+      "t": "#000000\n\n#ffff00\n#00ffff\n#ffffff"
     },
     ",\n\n⇧\nPage Up\nOpp"
   ],
@@ -212,26 +223,22 @@
     {
       "y": -0.8700000000000001,
       "x": 1,
-      "t": "#000000\n#ff0000\n#00ff00\n#0000ff",
-      "f": 3
+      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n\n\n\n\n#00ffff"
     },
-    "X\nF1\n!\n1",
+    "X\nF1\n!\n1\n\n\n\n\nLin",
     {
       "x": 1,
-      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n#ffffff",
-      "f": 3
+      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n#ffffff"
     },
     "V\nF3\n#\n3\nCur",
     {
       "x": 4,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff\n#ffffff",
-      "f": 3
+      "t": "#000000\n\n#ffff00\n#00ffff\n#ffffff"
     },
     "M\n\n⇩\nPage Down\nCur",
     {
       "x": 1,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff",
-      "f": 3
+      "t": "#000000\n\n#ffff00\n#00ffff"
     },
     ".\n\n⇨\nEnd"
   ],
@@ -251,7 +258,7 @@
     "B\nPause Break\n|\n\\",
     {
       "x": 2,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff",
+      "t": "#000000\n\n#ffff00\n#00ffff",
       "f": 3,
       "fa": [
         0,
@@ -265,14 +272,23 @@
   [
     {
       "y": -0.75,
-      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n#C0C0C0",
-      "f": 3
+      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n#C0C0C0\n\n\n\n#00ffff",
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
     },
-    "Z\nF10\n~\n`\nButton",
+    "Z\nF10\n~\n`\nButton\n\n\n\nWin",
     {
       "x": 10,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff\n#C0C0C0",
-      "f": 3
+      "t": "#000000\n\n\n#00ffff\n#C0C0C0"
     },
     "/\n\n\nInsert\nButton"
   ],
@@ -280,14 +296,12 @@
     {
       "y": -0.33999999999999986,
       "x": 2.5,
-      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n#ff00ff",
-      "f": 3
+      "t": "#000000\n#ff0000\n#00ff00\n#0000ff\n#ff00ff"
     },
     "Esc\n≣\n(\n.\nMedia",
     {
       "x": 5,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff\n#ff0000",
-      "f": 3
+      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff\n#ff0000"
     },
     "⌦\n🔇\nM\n⌦\nFun"
   ],
