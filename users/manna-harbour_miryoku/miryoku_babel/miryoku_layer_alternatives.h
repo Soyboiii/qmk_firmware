@@ -256,11 +256,12 @@ KC_A,              KC_S,              KC_H,              KC_T,              KC_G
 KC_Z,              KC_X,              KC_M,              KC_C,              KC_V,              KC_K,              KC_L,              KC_COMM,           KC_DOT,            KC_SLSH,           \
 U_NP,              U_NP,              KC_ESC,            KC_SPC,            KC_TAB,            KC_ENT,            KC_BSPC,           KC_DEL,            U_NP,              U_NP
 
+// this will be the gaming layer 
 #define MIRYOKU_ALTERNATIVES_TAP_QWERTY \
-KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              \
-KC_A,              KC_S,              KC_D,              KC_F,              KC_G,              KC_H,              KC_J,              KC_K,              KC_L,              KC_QUOT,           \
-KC_Z,              KC_X,              KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           KC_DOT,            KC_SLSH,           \
-U_NP,              U_NP,              KC_ESC,            KC_SPC,            KC_TAB,            KC_ENT,            KC_BSPC,           KC_DEL,            U_NP,              U_NP
+KC_TAB,            KC_Q,              KC_W,              KC_E,              KC_R,     /**/     KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              \
+KC_LCTL,           KC_A,              KC_S,              KC_D,              KC_F,     /**/     KC_H,              KC_J,              KC_K,              KC_L,              KC_QUOT,           \
+KC_LSFT,           KC_Z,              KC_X,              KC_C,              KC_V,     /**/     KC_N,              KC_M,              KC_COMM,           KC_DOT,            KC_SLSH,           \
+U_NP,              U_NP,              KC_ESC,            KC_SPC,            KC_LALT,  /**/     KC_ENT,            KC_BSPC,           DF(U_BASE),        U_NP,              U_NP
 
 #define MIRYOKU_ALTERNATIVES_TAP_QWERTZ \
 KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Z,              KC_U,              KC_I,              KC_O,              KC_P,              \
@@ -322,7 +323,7 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 // this is used
 #define MIRYOKU_ALTERNATIVES_MOUSE_VI \
 U_NA,              U_NA,              U_NA,              U_NA,              U_NA,              U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
-KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,           U_NU,              \
+KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,           DF(U_TAP),              \
 UC_M_WC,           UC_M_LN,           UC_M_MA,           QK_BOOT,           U_NA,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,           U_NU,              \
 U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_BTN2,           KC_BTN1,           KC_BTN3,           U_NP,              U_NP
 

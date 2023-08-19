@@ -149,10 +149,9 @@
     "J\n🔉\n⬇\n▼\nShift",
     {
       "x": 1,
-      "t": "#000000\n#ff00ff\n\n#00ffff",
       "f": 3
     },
-    "L\n⏭\n\n▶\nAlt"
+    "L\n⏭\n➡\n▶\nAlt"
   ],
   [
     {
@@ -191,9 +190,13 @@
     {
       "x": 10,
       "t": "#000000\n\n#ffff00\n#00ffff",
-      "f": 3
+      "fa": [
+        0,
+        0,
+        1
+      ]
     },
-    "'\n\n➡\nCaps Lock\nSuper"
+    "'\n\nGaming\nCaps Lock\nSuper"
   ],
   [
     {
@@ -301,9 +304,19 @@
     "Esc\n≣\n(\n.\nMedia",
     {
       "x": 5,
-      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff\n#ff0000"
+      "t": "#000000\n#ff00ff\n#ffff00\n#00ffff\n#ff0000\n\n\n#ffff00",
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
     },
-    "⌦\n🔇\nM\n⌦\nFun"
+    "⌦\n🔇\nM\n⌦\nFun\n\n\nExit gaming"
   ],
   [
     {
